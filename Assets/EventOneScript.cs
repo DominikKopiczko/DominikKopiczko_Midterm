@@ -11,6 +11,7 @@ public class EventOneScript : MonoBehaviour
     void Start()
     {
         LightsOff = false;
+        // eventually make a list of all the lights in order to change them at once or figure out how to use game object to change all of them
     }
 
     // Update is called once per frame
