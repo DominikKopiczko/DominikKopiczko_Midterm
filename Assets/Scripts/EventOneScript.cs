@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EventOneScript : MonoBehaviour
 {
-    public SpriteRenderer EnvLightSprite;
+    public SpriteRenderer EnvLightSprite1;
+    public SpriteRenderer EnvLightSprite2;
     public Vector3 LightScaleRate = new Vector3(0.5f,0.5f,0);  
     public bool LightsOff;
     // Start is called before the first frame update
@@ -17,8 +18,11 @@ public class EventOneScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(LightsOff == true && EnvLightSprite.transform.localScale.x >= 0){
-            EnvLightSprite.transform.localScale -= LightScaleRate * Time.deltaTime;
+        if(LightsOff == true && EnvLightSprite1.transform.localScale.x >= 0){
+            EnvLightSprite1.transform.localScale -= LightScaleRate * Time.deltaTime;
+        }
+        if(LightsOff == true && EnvLightSprite2.transform.localScale.x >= 0){
+            EnvLightSprite2.transform.localScale -= LightScaleRate * Time.deltaTime;
         }
     }
 
